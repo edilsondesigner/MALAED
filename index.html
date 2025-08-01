@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MALAED - Arrendamentos de Imóveis e Móveis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-home text-blue-600 text-2xl mr-2"></i>
+                <img src="Untitled-1.png" alt="" width="80px">
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="text-blue-600 font-medium">Início</a>
+                <a href="#properties" class="text-gray-600 hover:text-blue-600">Imóveis</a>
+                <a href="#furniture" class="text-gray-600 hover:text-blue-600">Móveis</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-600">Sobre Nós</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600">Contato</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <button class="hidden md:block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                    <i class="fas fa-user mr-2"></i>Área do Cliente
+                </button>
+                <button id="mobile-menu-button" class="md:hidden text-gray-600">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="#" class="block py-2 text-blue-600 font-medium">Início</a>
+            <a href="#properties" class="block py-2 text-gray-600">Imóveis</a>
+            <a href="#furniture" class="block py-2 text-gray-600">Móveis</a>
+            <a href="#about" class="block py-2 text-gray-600">Sobre Nós</a>
+            <a href="#contact" class="block py-2 text-gray-600">Contato</a>
+            <button class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg my-2 hover:bg-blue-700 transition">
+                <i class="fas fa-user mr-2"></i>Área do Cliente
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Encontre o Lar Perfeito ou Móveis Ideais</h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Alugue imóveis de qualidade ou mobílie sua casa com nossos elegantes móveis para arrendamento.</p>
+            
+            <div class="bg-white rounded-lg p-1 max-w-4xl mx-auto flex flex-col md:flex-row">
+                <div class="flex-1 p-2">
+                    <select class="w-full p-3 text-gray-700 border-r-0 md:border-r border-gray-300 rounded-lg md:rounded-r-none">
+                        <option>Selecione o tipo</option>
+                        <option>Apartamento</option>
+                        <option>Casa</option>
+                        <option>Escritório</option>
+                        <option>Móveis</option>
+                    </select>
+                </div>
+                <div class="flex-1 p-2">
+                    <select class="w-full p-3 text-gray-700 border-r-0 md:border-r border-gray-300 rounded-lg md:rounded-r-none">
+                        <option>Localização</option>
+                        <option>Maputo Cidade</option>
+                        <option>Maputo Provincia</option>
+                    </select>
+                </div>
+                <div class="p-2">
+                    <button class="w-full bg-blue-600 text-white p-3 rounded-lg md:rounded-l-none hover:bg-blue-700 transition">
+                        <i class="fas fa-search mr-2"></i> Pesquisar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section id="properties" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Imóveis em Destaque</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Descubra nossos melhores imóveis disponíveis para arrendamento em diversas localizações.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Property 1 -->
+                <div class="property-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3" alt="Apartamento" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                            Para Arrendar
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-medium">
+                            MZN/mês
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Apartamento T2 em Maputo C.</h3>
+                        <p class="text-gray-600 mb-4 flex items-center">
+                            <i class="fas fa-map-marker-alt text-blue-600 mr-2"></i> 
+                            Avenida da Mau Tse Tung, Maputo
+                        </p>
+                        <div class="flex justify-between text-gray-600 border-t border-gray-100 pt-4">
+                            <span class="flex items-center">
+                                <i class="fas fa-bed text-blue-600 mr-2"></i> 2 Quartos
+                            </span>
+                            <span class="flex items-center">
+                                <i class="fas fa-bath text-blue-600 mr-2"></i> 1 Banheiro
+                            </span>
+                            <span class="flex items-center">
+                                <i class="fas fa-ruler-combined text-blue-600 mr-2"></i> 75m²
+                            </span>
+                        </div>
+                        <button class="w-full mt-6 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+                            Ver Detalhes
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Property 2 -->
+                <div class="property-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3" alt="Casa" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                            Destaque
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-medium">
+                            MZN/mês
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Moradia T3 em Mozal</h3>
+                        <p class="text-gray-600 mb-4 flex items-center">
+                            <i class="fas fa-map-marker-alt text-blue-600 mr-2"></i> 
+                            Matola, Maputo P.
+                        </p>
+                        <div class="flex justify-between text-gray-600 border-t border-gray-100 pt-4">
+                            <span class="flex items-center">
+                                <i class="fas fa-bed text-blue-600 mr-2"></i> 3 Quartos
+                            </span>
+                            <span class="flex items-center">
+                                <i class="fas fa-bath text-blue-600 mr-2"></i> 2 Banheiros
+                            </span>
+                            <span class="flex items-center">
+                                <i class="fas fa-ruler-combined text-blue-600 mr-2"></i> 120m²
+                            </span>
+                        </div>
+                        <button class="w-full mt-6 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+                            Ver Detalhes
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Property 3 -->
+                <div class="property-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3" alt="Escritório" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                            Para Arrendar
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-medium">
+                            MZN/mês
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Escritório em </h3>
+                        <p class="text-gray-600 mb-4 flex items-center">
+                            <i class="fas fa-map-marker-alt text-blue-600 mr-2"></i> 
+                            
+                        </p>
+                        <div class="flex justify-between text-gray-600 border-t border-gray-100 pt-4">
+                            <span class="flex items-center">
+                                <i class="fas fa-door-open text-blue-600 mr-2"></i> 2 Salas
+                            </span>
+                            <span class="flex items-center">
+                                <i class="fas fa-bath text-blue-600 mr-2"></i> 1 Banheiro
+                            </span>
+                            <span class="flex items-center">
+                                <i class="fas fa-ruler-combined text-blue-600 mr-2"></i> 50m²
+                            </span>
+                        </div>
+                        <button class="w-full mt-6 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+                            Ver Detalhes
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="bg-white border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition">
+                    Ver Todos os Imóveis
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Furniture Rental Section -->
+    <section id="furniture" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Móveis para Arrendamento</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Mobílie seu espaço com nossos elegantes móveis disponíveis para arrendamento mensal.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Furniture 1 -->
+                <div class="furniture-card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+    <div class="relative">
+        <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?ixlib=rb-4.0.3" alt="Carro SUV" class="w-full h-48 object-cover">
+        <div class="furniture-overlay absolute inset-0 bg-black bg-opacity-30 opacity-0 flex items-center justify-center">
+            <button class="bg-white text-blue-600 px-4 py-2 rounded-full font-medium">
+                <i class="fas fa-shopping-cart mr-2"></i> Alugar
+            </button>
+        </div>
+    </div>
+    <div class="p-4">
+        <h3 class="font-medium text-gray-800 mb-1">Toyota RAV4</h3>
+        <p class="text-gray-600 text-sm mb-2">SUV, Automático, 2020</p>
+        <div class="flex justify-between items-center">
+            <span class="text-blue-600 font-medium">25.000 MZN/mês</span>
+            <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Carro 2 -->
+<div class="furniture-card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+    <div class="relative">
+        <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-4.0.3" alt="Carro Esportivo" class="w-full h-48 object-cover">
+        <div class="furniture-overlay absolute inset-0 bg-black bg-opacity-30 opacity-0 flex items-center justify-center">
+            <button class="bg-white text-blue-600 px-4 py-2 rounded-full font-medium">
+                <i class="fas fa-shopping-cart mr-2"></i> Alugar
+            </button>
+        </div>
+    </div>
+    <div class="p-4">
+        <h3 class="font-medium text-gray-800 mb-1">BMW Série 3</h3>
+        <p class="text-gray-600 text-sm mb-2">Esportivo, Automático, 2021</p>
+        <div class="flex justify-between items-center">
+            <span class="text-blue-600 font-medium">35.000 MZN/mês</span>
+            <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Carro 3 -->
+<div class="furniture-card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+    <div class="relative">
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-4.0.3" alt="Pickup Truck" class="w-full h-48 object-cover">
+        <div class="furniture-overlay absolute inset-0 bg-black bg-opacity-30 opacity-0 flex items-center justify-center">
+            <button class="bg-white text-blue-600 px-4 py-2 rounded-full font-medium">
+                <i class="fas fa-shopping-cart mr-2"></i> Alugar
+            </button>
+        </div>
+    </div>
+    <div class="p-4">
+        <h3 class="font-medium text-gray-800 mb-1">Ford Ranger</h3>
+        <p class="text-gray-600 text-sm mb-2">Pickup, Diesel, 4x4</p>
+        <div class="flex justify-between items-center">
+            <span class="text-blue-600 font-medium">30.000 MZN/mês</span>
+            <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Carro 4 -->
+<div class="furniture-card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+    <div class="relative">
+        <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-4.0.3" alt="Carro de Luxo" class="w-full h-48 object-cover">
+        <div class="furniture-overlay absolute inset-0 bg-black bg-opacity-30 opacity-0 flex items-center justify-center">
+            <button class="bg-white text-blue-600 px-4 py-2 rounded-full font-medium">
+                <i class="fas fa-shopping-cart mr-2"></i> Alugar
+            </button>
+        </div>
+    </div>
+    <div class="p-4">
+        <h3 class="font-medium text-gray-800 mb-1">Mercedes Classe A</h3>
+        <p class="text-gray-600 text-sm mb-2">Luxo, Automático, 2022</p>
+        <div class="flex justify-between items-center">
+            <span class="text-blue-600 font-medium">40.000 MZN/mês</span>
+            <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <i class="far fa-star"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-12">
+    <button class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+        Ver Todos os Carros
+    </button>
+</div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Por Que Escolher a MALAED?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Oferecemos as melhores soluções de arrendamento para imóveis e móveis.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6 rounded-lg bg-gray-50 hover:bg-blue-50 transition">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Segurança Garantida</h3>
+                    <p class="text-gray-600">Todos os nossos contratos são legalmente registrados e protegidos para sua tranquilidade.</p>
+                </div>
+                
+                <div class="text-center p-6 rounded-lg bg-gray-50 hover:bg-blue-50 transition">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-dollar-sign text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Preços Competitivos</h3>
+                    <p class="text-gray-600">Oferecemos as melhores taxas de arrendamento do mercado sem custos ocultos.</p>
+                </div>
+                
+                <div class="text-center p-6 rounded-lg bg-gray-50 hover:bg-blue-50 transition">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-headset text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Suporte 24/7</h3>
+                    <p class="text-gray-600">Nossa equipe está disponível a qualquer momento para ajudar com qualquer questão.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">O Que Nossos Clientes Dizem</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Avaliações reais de pessoas que usaram nossos serviços.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400 mr-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-sm text-gray-500">1 semana atrás</span>
+                    </div>
+                    <p class="text-gray-700 mb-4">"Aluguei um apartamento através da MALAED e o processo foi incrivelmente fácil. A equipe foi muito profissional e atenciosa."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <h4 class="font-medium text-gray-800">Ana Silva</h4>
+                            <p class="text-sm text-gray-600">Lisboa</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400 mr-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-sm text-gray-500">3 semanas atrás</span>
+                    </div>
+                    <p class="text-gray-700 mb-4">"Ótima experiência alugando móveis para meu novo apartamento. Qualidade excelente e preços justos. Recomendo!"</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <h4 class="font-medium text-gray-800">Miguel Santos</h4>
+                            <p class="text-sm text-gray-600">Pemba</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400 mr-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span class="text-sm text-gray-500">1 mês atrás</span>
+                    </div>
+                    <p class="text-gray-700 mb-4">"Precisava mobiliar meu escritório rapidamente e a MALAED me salvou. Entrega rápida e móveis de ótima qualidade."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Cliente" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <h4 class="font-medium text-gray-800">Carla Oliveira</h4>
+                            <p class="text-sm text-gray-600">Lichinga</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4">Entre em Contato Conosco</h2>
+                    <p class="max-w-2xl mx-auto">Tem dúvidas ou precisa de ajuda? Nossa equipe está pronta para atendê-lo.</p>
+                </div>
+                
+                <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="name" class="block mb-2">Nome Completo</label>
+                        <input type="text" id="name" class="w-full px-4 py-3 rounded-lg bg-blue-500 text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-white">
+                    </div>
+                    <div>
+                        <label for="email" class="block mb-2">E-mail</label>
+                        <input type="email" id="email" class="w-full px-4 py-3 rounded-lg bg-blue-500 text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-white">
+                    </div>
+                    <div>
+                        <label for="phone" class="block mb-2">Telefone</label>
+                        <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg bg-blue-500 text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-white">
+                    </div>
+                    <div>
+                        <label for="subject" class="block mb-2">Assunto</label>
+                        <select id="subject" class="w-full px-4 py-3 rounded-lg bg-blue-500 text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-white">
+                            <option>Selecione um assunto</option>
+                            <option>Arrendamento de Imóvel</option>
+                            <option>Arrendamento de Móveis</option>
+                            <option>Dúvidas</option>
+                            <option>Outros</option>
+                        </select>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label for="message" class="block mb-2">Mensagem</label>
+                        <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg bg-blue-500 text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-white"></textarea>
+                    </div>
+                    <div class="md:col-span-2 text-center">
+                        <button type="submit" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition">
+                            Enviar Mensagem
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-home text-blue-400 text-2xl mr-2"></i>
+                        <img src="Untitled-1.png" alt="" width="80px" background-color="bg-white">
+                    </div>
+                    <p class="text-gray-400 mb-4">Sua solução completa para arrendamento de imóveis e móveis em Moçambique.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Início</a></li>
+                        <li><a href="#properties" class="text-gray-400 hover:text-white transition">Imóveis</a></li>
+                        <li><a href="#furniture" class="text-gray-400 hover:text-white transition">Móveis</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">Sobre Nós</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Serviços</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Arrendamento Residencial</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Arrendamento Comercial</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Móveis para Casa</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Móveis para Escritório</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Consultoria</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contato</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-blue-400 mt-1 mr-3"></i>
+                            <span class="text-gray-400">Av. </span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-blue-400 mr-3"></i>
+                            <span class="text-gray-400">+258 8XX XXX XXX</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-blue-400 mr-3"></i>
+                            <span class="text-gray-400">info@examp.mz</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 MALAED Group. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

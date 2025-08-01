@@ -1,0 +1,15 @@
+  .property-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3');
+            background-size: cover;
+            background-position: center;
+        }
+        .furniture-card:hover .furniture-overlay {
+            opacity: 1;
+        }
+        .furniture-overlay {
+            transition: opacity 0.3s ease;
+        }
